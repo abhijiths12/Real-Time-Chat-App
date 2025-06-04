@@ -34,7 +34,9 @@ app.use('/api/auth',authRoutes)
 app.use('/api/contacts',contactsRoutes)
 app.use('/api/messages',messagesRoutes)
 
-
+app.get('/',(req,res) => {
+    res.status(200).send("hello from the backend")
+})
 
 const server = app.listen(port,() => {
     console.log(`server is running at port ${port}`);
